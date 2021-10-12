@@ -13,5 +13,6 @@ module.exports = {
     "linebreak-style": ["error", "windows"],
     quotes: [2, "double", { avoidEscape: true }],
     "no-unused-vars": "warn",
+    "import/extensions": "never",
   },
 };

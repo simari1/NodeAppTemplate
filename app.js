@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const accesslogger = require("./lib/log/accesslogger");
 const systemlogger = require("./lib/log/systemlogger");
 
@@ -7,7 +8,7 @@ const port = 3000;
 const router = require("./routes/router");
 
 app.use(express.static("public"));
-app.set("views", "views");
+app.use("/src", express.static(`${__dirname}/src`));
 app.set("view engine", "ejs");
 
 app.use(accesslogger());
